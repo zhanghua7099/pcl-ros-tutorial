@@ -34,8 +34,8 @@
 
 
   <!-- Spawn some junk -->
-  <param name="box_description" command="$(find xacro)/xacro.py $(find pcl_tester)/objects/simple_box.urdf" />
-  <param name="cylinder_description" command="$(find xacro)/xacro.py $(find pcl_tester)/objects/simple_cylinder.urdf" />
+  <param name="box_description" command="$(find xacro)/xacro $(find pcl_tester)/objects/simple_box.urdf" />
+  <param name="cylinder_description" command="$(find xacro)/xacro $(find pcl_tester)/objects/simple_cylinder.urdf" />
 
   <node name="spawn_box_1" pkg="gazebo_ros" type="spawn_model" args="-urdf -param box_description -x 2.23 -y -0.12 -z .2 -model box_model_1" respawn="false"/>
   <node name="spawn_box_2" pkg="gazebo_ros" type="spawn_model" args="-urdf -param box_description -x 0.84 -y -0.4 -z .2 -model box_model_2" respawn="false"/>
